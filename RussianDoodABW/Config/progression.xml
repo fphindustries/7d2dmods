@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<configs>
+	<remove xpath="/progression/perks/perk[@name='perkHammerForge']/effect_group/passive_effect[@level='2,5']"/>
+	<remove xpath="/progression/perks/perk[@name='perkHammerForge']/effect_group/passive_effect[@level='4,5']"/>
+	<append xpath="/progression/perks/perk[@name='perkHammerForge']/effect_group">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="2,5" tags="meleeToolFireaxeIron,meleeToolPickaxeIron,meleeToolHoeIron,meleeToolShovelIron,meleeToolClawHammer,meleeToolSledgehammer,armorLeatherBoots,armorLeatherGloves,armorLeatherHood,armorLeatherChest,armorLeatherPants"/>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="4,5" tags="toolForgeCrucible,resourceArrowHeadSteelAP,resourceForgedSteel,meleeToolPickaxeSteel,meleeToolShovelSteel,meleeToolFireaxeSteel"/>
+	</append>
+</configs>

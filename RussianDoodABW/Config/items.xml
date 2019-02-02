@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<configs>
+	<remove xpath="/items/item[@name='meleeToolHuntingKnifeSchematic']"/>
+	
+	<append xpath="/items">
+		<item name="meleeTantoKnife">
+			<property name="CustomIcon" value ="TantoKnife"/>
+			<property name="DescriptionKey" value="meleeTantoKnifeDesc"/>
+			<property name="Tags" value="knife,melee,light,weapon,meleeWeapon,perkDeepCuts,perkTheHuntsman"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="HoldType" value="36"/>
+			<property name="Meshfile" value="#@modfolder:Resources/TantoKnife.unity3d?TantoKnife.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="SoundDestroy" value="wooddestroy1"/>
+
+			<property class="Action0">
+				<property name="Class" value="DynamicMelee"/>
+				<property name="Damage_type" value="Slashing"/>
+				<property name="Sphere" value="0.1"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="ToolCategory.harvestingTools" value=".6" param1="1"/>
+				<property name="ToolCategory.Butcher" value="0" param1="4"/>
+				<property name="Sound_harvesting" value="open_animal" param1="organic"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="DynamicMelee"/>
+				<property name="Damage_type" value="Slashing"/>
+				<property name="Sphere" value="0.1"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="ToolCategory.harvestingTools" value=".6" param1="1"/>
+				<property name="ToolCategory.Butcher" value="0" param1="4"/>
+				<property name="Sound_harvesting" value="open_animal" param1="organic"/>
+				<property name="UsePowerAttackAnimation" value="true"/>
+			</property>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
+				<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="16"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="7"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="metal"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="organic"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="65"/>
+				<passive_effect name="HarvestCount" operation="base_set" value=".6" tags="butcherHarvest"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="13" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="200,500" tier="1,6"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+				<passive_effect name="DismemberChance" operation="base_add" value=".10" tags="primary"/>
+			</effect_group>
+			<effect_group name="Power Attack">
+				<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_subtract" value="0" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_add" value="19" tags="secondary"/>
+				<passive_effect name="DismemberChance" operation="base_add" value=".10" tags="secondary"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player1painlg">
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="70"/>
+					<requirement name="IsMale" target="self"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player2painlg">
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="70"/>
+					<requirement name="IsMale" target="self" invert="true"/>
+				</triggered_effect>
+			</effect_group>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="ActionSkillGroup" value="Blade Weapons"/>
+			<property name="CraftingSkillGroup" value="craftSkillWeapons"/>
+			<property name="RepairExpMultiplier" value="5.5"/>
+		</item>
+	
+		<item name="meleeKatanaSword">
+			<property name="CustomIcon" value ="KatanaSword"/>
+			<property name="DescriptionKey" value="meleeKatanaSwordDesc"/>
+			<property name="Tags" value="knife,melee,light,weapon,meleeWeapon,perkDeepCuts,perkTheHuntsman"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="HoldType" value="47"/>
+			<property name="Meshfile" value="#@modfolder:Resources/KatanaSword.unity3d?KatanaSword.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="SoundDestroy" value="wooddestroy1"/>
+			<property name="Weight" value="200"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="ActionSkillGroup" value="Blade Weapons"/>
+			<property name="CraftingSkillGroup" value="craftSkillWeapons"/>
+			<property name="RepairExpMultiplier" value="5.5"/>
+
+			<property class="Action0">
+				<property name="Class" value="DynamicMelee"/>
+				<property name="Damage_type" value="Slashing"/>
+				<property name="Sphere" value="0.25"/> 
+				<property name="Sound_start" value="swoosh"/>
+				<property name="ToolCategory.Butcher" value="0" param1="4"/>
+				<property name="Sound_harvesting" value="open_animal" param1="organic"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="DynamicMelee"/>
+				<property name="Damage_type" value="Slashing"/>
+				<property name="Sphere" value="0.25"/>   
+				<property name="Sound_start" value="swoosh"/>
+				<property name="ToolCategory.Butcher" value="0" param1="4"/>
+				<property name="Sound_harvesting" value="open_animal" param1="organic"/>
+				<property name="UsePowerAttackAnimation" value="true"/>
+			</property>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="MaxRange" operation="base_set" value="2.8"/>
+				<passive_effect name="BlockRange" operation="base_set" value="4.5"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="25"/> 
+				<passive_effect name="BlockDamage" operation="base_set" value="20"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="metal"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/> 
+				<passive_effect name="HarvestCount" operation="base_set" value=".6" tags="butcherHarvest"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="12.6" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="400,1000" tier="1,6"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0,5" tier="1,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".15" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+				<passive_effect name="DismemberChance" operation="base_add" value=".10" tags="primary"/>
+			</effect_group>
+			<effect_group name="Power Attack">
+				<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_subtract" value="0" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_add" value="20" tags="secondary"/>
+				<passive_effect name="DismemberChance" operation="base_add" value=".10" tags="secondary"/>
+
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player1painlg">
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="70"/>
+					<requirement name="IsMale" target="self"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="PlaySound" target="self" sound="player2painlg">
+					<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="70"/>
+					<requirement name="IsMale" target="self" invert="true"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+		
+		<item name="partsKatanaBlade">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="DescriptionKey" value="partsKatanaBladeDesc"/>
+			<property name="CustomIcon" value="KatanaBlade" />
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="MresourceForgedSteel"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="1500"/>
+			<property name="SellableToTrader" value="false"/>
+		</item>
+		
+		<item name="partsKatanaHandle">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="DescriptionKey" value="partsKatanaHandleDesc"/>
+			<property name="CustomIcon" value="KatanaHandle" />
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mleather"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="150"/>
+			<property name="SellableToTrader" value="false"/>
+		</item>
+		
+		<item name="partsKatanaSpacer">
+			<property name="Extends" value="vehicleWheels"/>
+			<property name="DescriptionKey" value="partsKatanaBladeDesc"/>
+			<property name="CustomIcon" value="KatanaSpacer" />
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mbrass"/>
+			<property name="Stacknumber" value="1"/> <!-- STK resource -->
+			<property name="EconomicValue" value="300"/>
+			<property name="SellableToTrader" value="false"/>
+		</item>
+	
+		<item name="meleeKatanaSwordRecipeSchematic">
+			<property name="Extends" value="unlockBookMaster"/>
+			<property name="DescriptionKey" value="meleeKatanaSwordRecipeSchematicDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="CustomIcon" value="KatanaBook"/>
+			<property class="Action0">
+				<requirement name="CVarCompare" cvar="meleeKatanaSword" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" cvar="partsKatanaBlade" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" cvar="partsKatanaHandle" operation="Equals" value="0"/>
+				<requirement name="CVarCompare" cvar="partsKatanaSpacer" operation="Equals" value="0"/>
+			</property>
+			<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeKatanaSword" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="partsKatanaBlade" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="partsKatanaHandle" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="partsKatanaSpacer" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		
+		<item name="meleeToolHuntingKnifeSchematic">
+			<property name="Extends" value="unlockBookMaster"/>
+			<property name="DescriptionKey" value="meleeToolHuntingKnifeSchematicDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="EconomicValue" value="500"/>
+			<property class="Action0">
+				<requirement name="CVarCompare" cvar="meleeToolHuntingKnife" operation="Equals" value="0"/>
+			</property>
+			<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolHuntingKnife" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		
+		<item name="meleeTantoKnifeSchematic">
+			<property name="CustomIcon" value="TantoBook"/>
+			<property name="Extends" value="unlockBookMaster"/>
+			<property name="DescriptionKey" value="meleeTantoKnifeSchematicDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="EconomicValue" value="500"/>
+			<property class="Action0">
+				<requirement name="CVarCompare" cvar="meleeTantoKnife" operation="Equals" value="0"/>
+			</property>
+			<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeTantoKnife" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		
+		<item name="meleeToolMacheteSchematic">
+			<property name="CustomIcon" value="MacheteBook"/>
+			<property name="Extends" value="unlockBookMaster"/>
+			<property name="DescriptionKey" value="meleeToolMacheteSchematicDesc"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="EconomicValue" value="500"/>
+			<property class="Action0">
+				<requirement name="CVarCompare" cvar="meleeToolMachete" operation="Equals" value="0"/>
+			</property>
+			<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolMachete" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		
+		<item name="q_wayoftheblade">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="CustomIcon" value="challengeQuestMaster"/>
+			<property name="DescriptionKey" value="q_wayofthebladeDesc"/>
+			<property class="Action0">
+				<requirement name="CVarCompare" cvar="meleeKatanaSword" operation="Equals" value="0"/>
+				<property name="QuestGiven" value="training_wayoftheblade1"/>
+			</property>
+		</item>
+	</append>
+</configs>

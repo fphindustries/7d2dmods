@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="RussianDood Adds Bladed Weapons" />
+		<Description value="Adds a few bladed weapons to the game so you can keep using melee for end game."/>
+		<Author value="RussianDood" />
+		<Version value="1.0" />
+		<Website value="http://7daystodie.com" />
+	</ModInfo>
+</xml>
