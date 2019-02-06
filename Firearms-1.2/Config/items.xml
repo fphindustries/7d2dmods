@@ -33,7 +33,7 @@
 
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
-		<property name="Magazine_items" value="9x19mm Bullet"/>
+		<property name="Magazine_items" value="ammo9mmBullet,ammo9mmBulletSteel,9x19mm Bullet"/>
 		<property name="Sound_start" value="lugerfire"/>
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
@@ -96,7 +96,7 @@
 
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
-		<property name="Magazine_items" value="38 Bullet"/>
+		<property name="Magazine_items" value="ammo9mmBullet,ammo9mmBulletSteel,38 Bullet"/>
 		<property name="Sound_start" value="lugerfire"/>
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
@@ -157,7 +157,7 @@
 
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
-		<property name="Magazine_items" value="40cal Bullet"/>
+		<property name="Magazine_items" value="ammo9mmBullet,ammo9mmBulletSteel,40cal Bullet"/>
 		<property name="Sound_start" value="glockfire"/>
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
@@ -218,7 +218,7 @@
 
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
-		<property name="Magazine_items" value="45ACP Bullet"/>
+		<property name="Magazine_items" value="ammo9mmBullet,ammo9mmBulletSteel,45ACP Bullet"/>
 		<property name="Sound_start" value="1911fire"/>
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
@@ -279,7 +279,7 @@
 
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
-		<property name="Magazine_items" value="50AE Bullet"/>
+		<property name="Magazine_items" value="ammo9mmBullet,ammo9mmBulletSteel,50AE Bullet"/>
 		<property name="Sound_start" value="defire"/>
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
@@ -356,7 +356,7 @@
 
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
-		<property name="Magazine_items" value="10mm Bullet"/>
+		<property name="Magazine_items" value="ammo9mmBullet,ammo9mmBulletSteel,10mm Bullet"/>
 		<property name="Sound_start" value="klobfire"/>
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
@@ -419,7 +419,7 @@
 
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
-		<property name="Magazine_items" value="10mm Bullet"/>
+		<property name="Magazine_items" value="ammo9mmBullet,ammo9mmBulletSteel,10mm Bullet"/>
 		<property name="Sound_start" value="macfire"/>
 		<property name="Sound_repeat" value=""/>
 		<property name="Sound_end" value=""/>
@@ -477,7 +477,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="40cal Bullet"/>
+		<property name="Magazine_items" value="ammo9mmBullet,ammo9mmBulletSteel,40cal Bullet"/>
 		<property name="Sound_start" value="mp5fire"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -538,7 +538,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="45ACP Bullet"/>
+		<property name="Magazine_items" value="ammo9mmBullet,ammo9mmBulletSteel,45ACP Bullet"/>
 		<property name="Sound_start" value="tommyfire"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -598,7 +598,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="9x19mm Bullet"/>
+		<property name="Magazine_items" value="ammo9mmBullet,ammo9mmBulletSteel,9x19mm Bullet"/>
 		<property name="Sound_start" value="mp40fire"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -891,7 +891,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="7.62x51mm Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,7.62x51mm Bullet"/>
 		<property name="Sound_start" value="fnfire"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -955,7 +955,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="5.56mm Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,5.56mm Bullet"/>
 		<property name="Sound_start" value="rustak"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -1013,7 +1013,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="223 Bullet,5.56mm Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,223 Bullet,5.56mm Bullet"/>
 		<property name="Sound_start" value="ar15fire"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -1072,7 +1072,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="7.62x39mm Bullet,5.56x45mm Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,7.62x39mm Bullet,5.56x45mm Bullet"/>
 		<property name="Sound_start" value="aktest"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -1131,7 +1131,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="5.56mm Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,5.56mm Bullet"/>
 		<property name="Sound_start" value="m16fire"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -1190,7 +1190,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="5.56x45mm Bullet,7.62x51mm Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,5.56x45mm Bullet,7.62x51mm Bullet"/>
 		<property name="Sound_start" value="m4a1fire"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -1248,7 +1248,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="5.56x45mm Bullet,7.62x51mm Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,5.56x45mm Bullet,7.62x51mm Bullet"/>
 		<property name="Sound_start" value="scarfire"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -1306,7 +1306,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.5"/>
-		<property name="Magazine_items" value="30-06 Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,30-06 Bullet"/>
 		<property name="Reload_time" value="2.66"/>
 		<property name="Sound_start" value="m1fire"/>
 		<property name="Sound_repeat" value=""/>
@@ -1372,7 +1372,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="5.56x45mm Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,5.56x45mm Bullet"/>
 		<property name="Sound_start" value="m249fire"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -1431,7 +1431,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.150"/>
-		<property name="Magazine_items" value="5.56x45mm Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,5.56x45mm Bullet"/>
 		<property name="Sound_start" value="ak47_fire"/>
 		<property name="Sound_empty" value="weapon_empty"/>
 		<property name="Sound_reload" value="ak47_reload"/>
@@ -1490,7 +1490,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.5"/>
-		<property name="Magazine_items" value="7.62x51mm Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,7.62x51mm Bullet"/>
 		<property name="Reload_time" value="2.5"/>
 		<property name="Sound_start" value="sr25fire"/>
 		<property name="Sound_repeat" value=""/>
@@ -1551,7 +1551,7 @@
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value="0.5"/>
-		<property name="Magazine_items" value="50cal Bullet"/>
+		<property name="Magazine_items" value="ammo762mmBulletFMJ,ammo762mmBulletFMJSteel,50cal Bullet"/>
 		<property name="Reload_time" value="2.5"/>
 		<property name="Sound_start" value="m82fire"/>
 		<property name="Sound_repeat" value=""/>
